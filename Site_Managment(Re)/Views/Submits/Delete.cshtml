@@ -1,0 +1,80 @@
+﻿@model Site_Managment_Re_.Models.Submit
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Submit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Site.Site_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Site.Site_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.S_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.S_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.E_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.E_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

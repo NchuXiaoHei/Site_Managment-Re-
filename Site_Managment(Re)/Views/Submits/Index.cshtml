@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Site_Managment_Re_.Models.Submit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Site.Site_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Datee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Site.Site_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Datee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Note)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Per_ID ,Datee = item.Datee,S_time = item.S_time}) |
+            @Html.ActionLink("Details", "Details", new { id = item.Per_ID, Datee = item.Datee, S_time = item.S_time }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Per_ID, Datee = item.Datee, S_time = item.S_time })
+        </td>
+    </tr>
+}
+
+</table>
